@@ -1,0 +1,15 @@
+.avatar {
+    display: flex;
+}
+.avatarImage {
+    width: 100px;
+    height: 100px;
+}
+.avatarImage img {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+}
+

@@ -1,0 +1,26 @@
+.dialogs {
+    display: flex;
+}
+
+.dialogsItems {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+    background-color: #61dafb;
+    width: 200px;
+}
+
+.dialogsMessages {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+    background-color: beige;
+    width: 100%;
+}
+
+.formSubmit {
+
+}
+
