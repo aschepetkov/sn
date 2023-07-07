@@ -1,5 +1,5 @@
 import React from 'react';
-import {addMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialog-reducer";
+import {addMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialog-reducer";
 import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {

@@ -1,29 +1,41 @@
 import classes from './Nav.module.css'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
+import { CustomLink } from "./CustomLink";
 
 const Nav = () => {
-    function setActiveClass(a) {
-        const {isActive} = a;
 
-        if (isActive) {
-            return `${classes.link} ${classes.activeLink}`;
-        }
-        return `${classes.link}`;
+    // Хук useNavigate - для программных переходов по страницам
+    const navigate = useNavigate();
+
+    const backLink = (e) => {
+        e.preventDefault();
+
+        // параметр в виде number - для перехода по истории
+        // ('two', { replace: false }) - указание урла для перехода и объект, определяющий нужно ли записывать переход в историю
+        navigate(-1);
     }
 
     return (
         <nav className={classes.nav}>
+
+            <div className={classes.backLink}>
+                <Link to='/' className={classes.link} onClick={backLink}> ← Назад </Link>
+            </div>
+
             <div>
-                <NavLink to="/" className={setActiveClass}>Главная</NavLink>
+                <CustomLink to="/">Главная</CustomLink>
             </div>
             <div>
-                <NavLink to="/profile" className={setActiveClass}>Профиль</NavLink>
+                <CustomLink to="/profile">Профиль</CustomLink>
             </div>
             <div>
-                <NavLink to="/dialogs" className={setActiveClass}>Сообщения</NavLink>
+                <CustomLink to="/dialogs">Сообщения</CustomLink>
             </div>
             <div>
-                <NavLink to="/news" className={setActiveClass}>Новости</NavLink>
+                <CustomLink to="/news">Новости</CustomLink>
+            </div>
+            <div>
+                <CustomLink to="/blog" >Блог</CustomLink>
             </div>
         </nav>
     );

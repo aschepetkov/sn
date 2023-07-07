@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './News.module.css';
+import {Navigate} from "react-router-dom";
 
 const News = () => {
 

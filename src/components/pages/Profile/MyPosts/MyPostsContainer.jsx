@@ -1,5 +1,5 @@
 import React from 'react';
-import {addActionCreator, postActionCreator} from "../../../redux/profile-reducer";
+import {addActionCreator, postActionCreator} from "../../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
 
 const MyPostsContainer = (props) => {

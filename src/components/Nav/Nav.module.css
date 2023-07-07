@@ -13,3 +13,12 @@
 .activeLink {
     color: red;
 }
+
+.backLink {
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.backLink .link {
+    color: #8523e8;
+}
