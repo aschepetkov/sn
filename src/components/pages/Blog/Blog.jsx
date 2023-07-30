@@ -1,8 +1,11 @@
 import React from "react";
-import { Link, useSearchParams } from 'react-router-dom';
-const Blog = () => {
-    const [posts, setPosts] = React.useState([]);
+import { Link, useSearchParams} from 'react-router-dom';
 
+const Blog = () => {
+
+    // const {posts} = useLoaderData();
+
+    const [posts, setPosts] = React.useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
     const query = searchParams.get('search') || '';
 
@@ -45,5 +48,15 @@ const Blog = () => {
         </>
     );
 };
+
+// async function getPosts() {
+//     const posts = await fetch('https://jsonplaceholder.typicode.com/posts');
+//
+//     return await posts.json();
+// }
+//
+// const blogLoader = async () => {
+//     return defer({posts: getPosts()});
+// }
 
 export default Blog;

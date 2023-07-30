@@ -1,6 +1,6 @@
 import c from './Profile.module.css';
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-const Profile = (props) => {
+const Profile = () => {
     return (
         <div>
             {/*<div className={c.image}>*/}
@@ -18,9 +18,7 @@ const Profile = (props) => {
                 </div>
 
             </div>
-            <MyPostsContainer
-                store={props.store}
-            />
+            <MyPostsContainer />
         </div>
     );
 }

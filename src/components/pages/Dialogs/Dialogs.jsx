@@ -6,6 +6,8 @@ import {addMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dia
 
 const Dialogs = (props) => {
 
+    const state = props.messagePage;
+
     const onChange = (e)=> {
         const text = e.target.value;
 
@@ -20,19 +22,19 @@ const Dialogs = (props) => {
         <div className={classes.dialogs}>
             <div className={classes.dialogsIitems}>
                 {
-                    props.state.messagePage.dialog.map(dialog => {
-                        return <DialogItem name={dialog.name} id={dialog.id} />
+                    state.dialog.map(dialog => {
+                        return <DialogItem key={dialog.name} name={dialog.name} id={dialog.id} />
                     })
                 }
             </div>
             <div className={classes.dialogsMessages}>
                 {
-                    props.state.messagePage.message.map(message => {
-                        return <Message message={message.message} id={message.id} />
+                    state.message.map(message => {
+                        return <Message key={message.message} message={message.message} id={message.id} />
                     })
                 }
                 <div className={classes.formSubmit}>
-                    <textarea onChange={onChange} value={props.newMessage}/>
+                    <textarea onChange={onChange} value={state.newMessage}/>
                     <button onClick={onClick}>Отправить</button>
                 </div>
             </div>

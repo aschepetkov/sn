@@ -35,6 +35,9 @@ const Nav = () => {
                 <CustomLink to="/news">Новости</CustomLink>
             </div>
             <div>
+                <CustomLink to="/users">Пользователи</CustomLink>
+            </div>
+            <div>
                 <CustomLink to="/blog" >Блог</CustomLink>
             </div>
         </nav>

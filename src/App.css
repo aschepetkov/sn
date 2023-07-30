@@ -45,6 +45,7 @@ body {
 .app-wrapper-content {
   grid-area: content;
   background-color: #bdc2bd;
+  position: relative;
 }
 
 
